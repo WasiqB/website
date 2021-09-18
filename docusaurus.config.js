@@ -7,7 +7,7 @@ module.exports = {
   title: 'Wasiq Bhamla',
   tagline: 'Open Source Contributor, Mentor and Senior QA Consultant at Thoughtworks',
   url: 'https://wasiqbhamla.github.io',
-  baseUrl: '/',
+  baseUrl: '/website/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
   trailingSlash: false,

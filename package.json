@@ -72,7 +72,7 @@
       "yarn format",
       "yarn format-fix"
     ],
-    "**/*.js": [
+    "**/*.js*": [
       "yarn lint",
       "yarn format",
       "yarn format-fix"
