@@ -3,3 +3,4 @@
 /.docusaurus
 *.css
 *.svg
+/build
