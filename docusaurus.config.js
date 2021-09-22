@@ -15,6 +15,7 @@ module.exports = {
   organizationName: 'WasiqBhamla', // Usually your GitHub org/user name.
   projectName: 'website', // Usually your repo name.
 
+  plugins: ['@docusaurus/plugin-ideal-image'],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -42,6 +43,11 @@ module.exports = {
       navbar: {
         title: 'Wasiq Bhamla',
         items: [
+          {
+            position: 'left',
+            to: '/about',
+            label: 'About me',
+          },
           {
             type: 'doc',
             docId: 'intro',

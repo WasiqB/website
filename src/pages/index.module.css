@@ -5,7 +5,7 @@
 
 .heroBanner {
   padding: 4rem 0;
-  text-align: center;
+  text-align: left;
   position: relative;
   overflow: hidden;
 }
@@ -20,4 +20,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.heroProfile {
+  text-align: center;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: 100% 0%;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }

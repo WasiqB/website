@@ -4,3 +4,4 @@
 *.css
 *.svg
 /build
+package.json
