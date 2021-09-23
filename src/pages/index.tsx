@@ -4,7 +4,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
-import HomepageFeatures from '../components/HomepageFeatures';
+import HomepageServices from '../components/HomepageServices';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 function HomepageHeader(): JSX.Element {
@@ -44,7 +44,7 @@ export default function Home(): JSX.Element {
     >
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        <HomepageServices />
       </main>
     </Layout>
   );
