@@ -1,5 +1,7 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const organizationName = 'WasiqBhamla';
+const projectName = 'website';
 
 // With JSDoc @type annotations, IDEs can provide config autocompletion
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
@@ -12,8 +14,8 @@ module.exports = {
   onBrokenMarkdownLinks: 'throw',
   trailingSlash: false,
   favicon: 'img/favicon.ico',
-  organizationName: 'WasiqBhamla', // Usually your GitHub org/user name.
-  projectName: 'website', // Usually your repo name.
+  organizationName: organizationName,
+  projectName: projectName,
 
   plugins: ['@docusaurus/plugin-ideal-image'],
   presets: [
@@ -23,13 +25,11 @@ module.exports = {
       ({
         docs: {
           sidebarPath: require.resolve('./src/components/sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/WasiqB/my-react-site/edit/main/website/',
+          editUrl: `https://github.com/${organizationName}/${projectName}/edit/main/`,
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl: 'https://github.com/WasiqB/my-react-site/edit/main/website/blog/',
+          editUrl: `https://github.com/${organizationName}/${projectName}/edit/main/blog/`,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -49,12 +49,6 @@ module.exports = {
             label: 'About me',
           },
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {
             to: '/blog',
             label: 'Blog',
             position: 'left',
@@ -70,17 +64,12 @@ module.exports = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
+              {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/wasiqbhamla/',
+              },
               {
                 label: 'Stack Overflow',
                 href: 'https://stackoverflow.com/users/5320558/wasiq-bhamla',
@@ -88,10 +77,6 @@ module.exports = {
               {
                 label: 'Twitter',
                 href: 'https://twitter.com/WasiqBhamla',
-              },
-              {
-                label: 'LinkedIn',
-                href: 'https://www.linkedin.com/in/wasiqbhamla/',
               },
             ],
           },
@@ -116,4 +101,5 @@ module.exports = {
         darkTheme: darkCodeTheme,
       },
     }),
+  scripts: ['https://buttons.github.io/buttons.js'],
 };

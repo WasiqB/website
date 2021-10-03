@@ -17,23 +17,22 @@ type ServiceItem = {
 
 const ServiceList: ServiceItem[] = [
   {
-    title: 'Personalized Training',
-    image: '/img/undraw_personal_training.svg',
-    description: (
-      <>
-        I like training people who have hunger to learn new technologies related to QA testing and
-        Automation. I will give you personal training for any topic related to Automation testing.
-      </>
-    ),
-  },
-  {
     title: 'Freelancing projects',
     image: '/img/undraw_Organizing_projects.svg',
     description: (
       <>
-        I am passionate about QA testing and Automation. I can help you in doing QA activities for
-        your project. If you need my services for your project at reasonable cost, then do reach out
-        to me.
+        I can help automate any product for any platform (e.g: Web, API, Android and iOS) or help
+        you create Test automation frameworks.
+      </>
+    ),
+  },
+  {
+    title: 'Personalized Training',
+    image: '/img/undraw_personal_training.svg',
+    description: (
+      <>
+        I can provide personalized training for any tech stack related to Test Automation and CI /
+        CD.
       </>
     ),
   },
@@ -42,8 +41,8 @@ const ServiceList: ServiceItem[] = [
     image: '/img/undraw_teacher.svg',
     description: (
       <>
-        You can connect me if you need mentoring from QA perspective or any thing related to QA or
-        DevOps. I&apos;ll do my best to guide you in the right direction.
+        I can help mentor you in Test Automation space, understand different concepts and tools used
+        for Automation and CI / CD.
       </>
     ),
   },
