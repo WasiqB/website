@@ -1,6 +1,7 @@
 ---
 title: Beginners guide for Appium Automation for iOS apps
 authors: wasiq
+image: ./images/appium-ios.jpeg
 tags:
   - Appium
   - Appium iOS
@@ -9,6 +10,8 @@ tags:
 ## Introduction
 
 I just completed setting up my Mac for Appium and wanted to share my findings with all. Unlike Windows, the steps to setting up Mac machine for iOS devices is not that easy. We will see the complete steps required in order to get us ready for iOS testing with Appium on Mac OS X.
+
+<!--truncate-->
 
 ## What do we need for iOS Automation?
 
