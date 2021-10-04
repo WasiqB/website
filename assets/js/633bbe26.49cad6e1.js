@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[3450],{7020:function(t){t.exports=JSON.parse('{"allTagsPath":"/website/blog/tags","slug":"/website/blog/tags/ok-http","name":"OkHttp","count":1,"permalink":"/website/blog/tags/ok-http"}')}}]);
