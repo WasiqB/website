@@ -1,4 +1,4 @@
-name: Deploy my website of GitHub
+name: Deploy website on GitHub
 
 on:
   pull_request:
