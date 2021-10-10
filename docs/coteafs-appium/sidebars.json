@@ -1,0 +1,34 @@
+{
+  "docs": {
+    "Getting Started": ["intro", "pre-requisite", "usage"],
+    "Configuration": ["config-basics", "server-setting", "device-setting"],
+    "Core Framework": [
+      "orp",
+      "supported-devices",
+      "supported-device-actions",
+      "supported-device-element-actions"
+    ],
+    "Abstraction": ["activity-class", "action-class"],
+    "Extras": [
+      "error-handling",
+      "logging",
+      "verification",
+      "alerts",
+      "keyboard",
+      "screenshot",
+      "video",
+      "video-streaming",
+      "clipboard-handling",
+      "multi-language",
+      "battery"
+    ],
+    "Example": [
+      "sample-config",
+      "sample-setup-class",
+      "sample-activity-class",
+      "sample-action-class",
+      "sample-test-class",
+      "sample-testng"
+    ]
+  }
+}

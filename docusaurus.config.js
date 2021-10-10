@@ -24,7 +24,11 @@ module.exports = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./src/components/sidebars.js'),
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+          path: 'docs/coteafs-appium',
+          routeBasePath: '/projects/coteafs-appium',
+          sidebarPath: require.resolve('./docs/coteafs-appium/sidebars.json'),
           editUrl: `https://github.com/${organizationName}/${projectName}/edit/main/`,
         },
         blog: {
@@ -99,6 +103,7 @@ module.exports = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ['java', 'yaml'],
       },
     }),
   scripts: ['https://buttons.github.io/buttons.js'],
