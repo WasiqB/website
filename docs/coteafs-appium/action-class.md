@@ -64,4 +64,4 @@ public void testLogin (final String user, final String password) {
 `addInputValue` | Add input value by specifying the element name as key for corresponding Element.
 `value` | Will return the input value specified in our Tests
 
-[deviceActivity]: /projects/appium/activity-class/
+[deviceActivity]: /projects/coteafs-appium/activity-class/

@@ -7,7 +7,7 @@ id: sample-config
 
 Config file is main resource of this framework where all the necessary config setup for servers and devices
 are done.
-For naming convention of the file, refer the details mentioned [here](/coteafs/appium/config-basics/).
+For naming convention of the file, refer the details mentioned [here](/projects/coteafs-appium/config-basics/).
 
 ```yaml
 server: &default_server

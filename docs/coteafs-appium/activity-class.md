@@ -50,4 +50,4 @@ public class LoginActivity extends AndroidActivity {
 
 This is how `DeviceElement` object is created using abstract method `prepare`, where object will be root object which will have user interactive elements as it's child. To know more about DeviceElement, [see here][deviceElement].
 
-[deviceElement]: /projects/appium/orp/
+[deviceElement]: /projects/coteafs-appium/orp/

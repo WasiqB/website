@@ -69,5 +69,5 @@ To know more about each configuration section, see the documentation at,
 - [Device configuration][device]
 
 [config]: https://github.com/WasiqB/coteafs-datasource
-[server]: /projects/appium/server-setting/
-[device]: /projects/appium/device-setting/
+[server]: /projects/coteafs-appium/server-setting/
+[device]: /projects/coteafs-appium/device-setting/
