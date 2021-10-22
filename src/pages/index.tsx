@@ -1,11 +1,9 @@
 import React from 'react';
-import clsx from 'clsx';
 import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './index.module.css';
 import Features, { FeatureItem } from '../components/Features';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import HeroSection, { ButtonProps, GitHubButton } from '../components/heroSection';
 
 const ServiceList: FeatureItem[] = [
   {
@@ -50,31 +48,30 @@ const ServiceList: FeatureItem[] = [
   },
 ];
 
-function HomepageHeader(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
+const gitButtons: GitHubButton[] = [
+  {
+    user: 'WasiqB',
+    type: 'follow',
+  },
+];
+
+const buttons: ButtonProps[] = [
+  {
+    text: 'About',
+    className: 'button--primary',
+    to: '/about',
+  },
+];
+
+function HomepageHeader({ title, description }): JSX.Element {
   return (
-    <section className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className='container'>
-        <div className='row'>
-          <div className={clsx('col col--6', styles.heroProfile)}>
-            <img
-              src={useBaseUrl('/img/home_banner.jpg')}
-              alt={siteConfig.title}
-              className={styles.heroImage}
-            />
-          </div>
-          <div className='col col--6'>
-            <h1 className='hero__title'>{siteConfig.title}</h1>
-            <p className='hero__subtitle'>{siteConfig.tagline}</p>
-            <div className={styles.buttons}>
-              <Link className='button button--secondary button--lg' to='/about'>
-                Know more about me...
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <HeroSection
+      image={useBaseUrl('/img/home_banner.jpg')}
+      description={description}
+      message={title}
+      buttons={buttons}
+      gitButtons={gitButtons}
+    />
   );
 }
 
@@ -82,7 +79,10 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout title={siteConfig.title} description={siteConfig.tagline}>
-      <HomepageHeader />
+      <HomepageHeader
+        title={`${siteConfig.title} - ${siteConfig.tagline}`}
+        description={siteConfig.title}
+      />
       <main>
         <Features features={ServiceList} />
       </main>
