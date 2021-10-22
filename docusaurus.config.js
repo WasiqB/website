@@ -2,12 +2,14 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const organizationName = 'WasiqBhamla';
 const projectName = 'website';
+const userName = 'WasiqB';
 
 // With JSDoc @type annotations, IDEs can provide config autocompletion
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Wasiq Bhamla',
-  tagline: 'Open Source Contributor, Mentor and Senior QA Consultant at Thoughtworks',
+  tagline:
+    '<b>Open Source Contributor</b>, <b>Mentor</b> and <b>Senior QA Consultant at Thoughtworks</b>',
   url: 'https://wasiqbhamla.github.io',
   baseUrl: '/website/',
   onBrokenLinks: 'throw',
@@ -16,7 +18,10 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: organizationName,
   projectName: projectName,
-
+  customFields: {
+    user: userName,
+  },
+  themes: ['@docusaurus/theme-live-codeblock'],
   plugins: ['@docusaurus/plugin-ideal-image'],
   presets: [
     [
@@ -58,7 +63,7 @@ module.exports = {
             position: 'left',
           },
           {
-            href: 'https://github.com/WasiqB',
+            href: `https://github.com/${userName}`,
             label: 'GitHub',
             position: 'right',
           },
@@ -93,7 +98,7 @@ module.exports = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/WasiqB',
+                href: `https://github.com/${userName}`,
               },
             ],
           },
