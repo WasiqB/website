@@ -78,7 +78,7 @@ function GitHubCountButton({ user, repo = null, type, v2 = false }: GitHubButton
           src={source}
           frameBorder='0'
           scrolling='0'
-          width={160}
+          width={220}
           height={30}
         />
       </span>
