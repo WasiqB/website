@@ -29,35 +29,46 @@ export type GitHubButton = {
   user: string;
   repo?: string;
   type: 'star' | 'watch' | 'fork' | 'follow';
+  v2?: boolean;
 };
+
 function CTAButtons({ buttons, gitButtons }: CTAProps): JSX.Element {
   if (!buttons || buttons.length === 0) return;
   return (
     <>
       <div className={styles.indexCtas}>
+        {gitButtons &&
+          gitButtons.map((button) => (
+            <GitHubCountButton
+              key={button.type}
+              user={button.user}
+              repo={button.repo}
+              type={button.type}
+              v2={button.v2}
+            />
+          ))}
         {buttons.map((button) => (
           <>
-            <Link className={clsx('button', button.className)} to={useBaseUrl(button.to)}>
+            <Link
+              key={button.to}
+              className={clsx('button', button.className)}
+              to={useBaseUrl(button.to)}
+            >
               {button.iconClass && <i className={button.iconClass}></i>}
               {button.text}
             </Link>
           </>
         ))}
-        {gitButtons &&
-          gitButtons.map((button) => (
-            <>
-              <GitHubCountButton user={button.user} repo={button.repo} type={button.type} />
-            </>
-          ))}
       </div>
     </>
   );
 }
 
-function GitHubCountButton({ user, repo = null, type }: GitHubButton): JSX.Element {
+function GitHubCountButton({ user, repo = null, type, v2 = false }: GitHubButton): JSX.Element {
   const gitUrl = 'https://ghbtns.com/github-btn.html';
   const repoQuery = repo ? `repo=${repo}&` : '';
-  const queries = `user=${user}&${repoQuery}type=${type}&count=true&size=large`;
+  const newVersion = v2 === true ? '&v=2' : '';
+  const queries = `user=${user}&${repoQuery}type=${type}&count=true&size=large${newVersion}`;
   const source = `${gitUrl}?${queries}`;
   return (
     <>
@@ -67,7 +78,7 @@ function GitHubCountButton({ user, repo = null, type }: GitHubButton): JSX.Eleme
           src={source}
           frameBorder='0'
           scrolling='0'
-          width={220}
+          width={160}
           height={30}
         />
       </span>

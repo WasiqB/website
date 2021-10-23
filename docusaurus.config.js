@@ -8,8 +8,7 @@ const userName = 'WasiqB';
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Wasiq Bhamla',
-  tagline:
-    '<b>Open Source Contributor</b>, <b>Mentor</b> and <b>Senior QA Consultant at Thoughtworks</b>',
+  tagline: 'Open Source Contributor, Mentor and Senior QA Consultant at Thoughtworks',
   url: 'https://wasiqbhamla.github.io',
   baseUrl: '/website/',
   onBrokenLinks: 'throw',

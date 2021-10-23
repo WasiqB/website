@@ -12,7 +12,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 export type FeatureItem = {
   title: string;
   image: string;
-  description: JSX.Element;
+  description: string;
 };
 
 type FeatureItems = {
@@ -30,7 +30,7 @@ function FeatureTitle({ title, image }): JSX.Element {
 function FeatureDescription({ title, description }): JSX.Element {
   return (
     <div className='text--center padding-horiz--md'>
-      <h3>{title}</h3>
+      <h2>{title}</h2>
       <p>{description}</p>
     </div>
   );
