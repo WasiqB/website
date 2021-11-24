@@ -6,6 +6,7 @@ import React from 'react';
 import styles from './styles.module.css';
 
 export type ButtonProps = {
+  id: string;
   className: string;
   to: string;
   iconClass?: string;
@@ -26,6 +27,7 @@ type CTAProps = {
 };
 
 export type GitHubButton = {
+  id: string;
   user: string;
   repo?: string;
   type: 'star' | 'watch' | 'fork' | 'follow';
@@ -40,7 +42,8 @@ function CTAButtons({ buttons, gitButtons }: CTAProps): JSX.Element {
         {gitButtons &&
           gitButtons.map((button) => (
             <GitHubCountButton
-              key={button.type}
+              id={button.id}
+              key={button.id}
               user={button.user}
               repo={button.repo}
               type={button.type}
@@ -48,16 +51,14 @@ function CTAButtons({ buttons, gitButtons }: CTAProps): JSX.Element {
             />
           ))}
         {buttons.map((button) => (
-          <>
-            <Link
-              key={button.to}
-              className={clsx('button', button.className)}
-              to={useBaseUrl(button.to)}
-            >
-              {button.iconClass && <i className={button.iconClass}></i>}
-              {button.text}
-            </Link>
-          </>
+          <Link
+            key={button.id}
+            className={clsx('button', button.className)}
+            to={useBaseUrl(button.to)}
+          >
+            {button.iconClass && <i className={button.iconClass}></i>}
+            {button.text}
+          </Link>
         ))}
       </div>
     </>
@@ -71,29 +72,23 @@ function GitHubCountButton({ user, repo = null, type, v2 = false }: GitHubButton
   const queries = `user=${user}&${repoQuery}type=${type}&count=true&size=large${newVersion}`;
   const source = `${gitUrl}?${queries}`;
   return (
-    <>
-      <span className={styles.indexCtasGitHubButtonWrapper}>
-        <iframe
-          className={styles.indexCtasGitHubButton}
-          src={source}
-          frameBorder='0'
-          scrolling='0'
-          width={220}
-          height={30}
-        />
-      </span>
-    </>
+    <span className={styles.indexCtasGitHubButtonWrapper}>
+      <iframe
+        className={styles.indexCtasGitHubButton}
+        src={source}
+        frameBorder='0'
+        scrolling='0'
+        width={220}
+        height={30}
+      />
+    </span>
   );
 }
 
 function HeroContent({ image, message, description }): JSX.Element {
   return (
     <h1 className={styles.heroProjectTagline}>
-      <img
-        alt={translate({ message: message })}
-        className={styles.heroLogo}
-        src={useBaseUrl(image)}
-      />
+      <img alt={translate({ message: message })} className={styles.heroLogo} src={image} />
       <span
         className={styles.heroTitleTextHtml}
         dangerouslySetInnerHTML={{
