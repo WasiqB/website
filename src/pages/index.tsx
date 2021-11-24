@@ -2,12 +2,12 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Features from '../components/Features';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import HeroSection, { ButtonProps, GitHubButton } from '../components/heroSection';
 import ServiceList from '../contents/services.json';
 
 const gitButtons: GitHubButton[] = [
   {
+    id: 'gbtn-1',
     user: 'WasiqB',
     type: 'follow',
   },
@@ -15,6 +15,7 @@ const gitButtons: GitHubButton[] = [
 
 const buttons: ButtonProps[] = [
   {
+    id: 'btn-1',
     text: 'About',
     className: 'button--primary',
     to: '/about',
@@ -24,7 +25,7 @@ const buttons: ButtonProps[] = [
 function HomepageHeader({ title, description }): JSX.Element {
   return (
     <HeroSection
-      image={useBaseUrl('/img/home_banner.jpg')}
+      image={'/img/home_banner.jpg'}
       description={description}
       message={title}
       buttons={buttons}

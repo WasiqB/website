@@ -7,7 +7,6 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './Features.module.css';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export type FeatureItem = {
   title: string;
@@ -22,7 +21,7 @@ type FeatureItems = {
 function FeatureTitle({ title, image }): JSX.Element {
   return (
     <div className='text--center'>
-      <img className={styles.featureSvg} alt={title} src={useBaseUrl(image)} />
+      <img className={styles.featureSvg} alt={title} src={image} />
     </div>
   );
 }
