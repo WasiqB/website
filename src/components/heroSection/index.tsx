@@ -113,7 +113,7 @@ const HeroSection = ({
   return (
     <section className={styles.hero}>
       <div className={styles.heroInner}>
-        <HeroContent image={image} message={message} description={description} />
+        <HeroContent image={useBaseUrl(image)} message={message} description={description} />
       </div>
       <CTAButtons buttons={buttons} gitButtons={gitButtons} />
     </section>
