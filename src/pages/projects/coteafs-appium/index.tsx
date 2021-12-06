@@ -1,17 +1,19 @@
 import React from 'react';
 import Layout from '@theme/Layout';
-import Features from '@site/src/components/Features';
-import features from '@site/src/contents/coteafs-appium-features.json';
-import HeroSection, { ButtonProps, GitHubButton } from '@site/src/components/heroSection';
+import Features from '@components/Features';
+import features from '@contents/coteafs-appium-features.json';
+import HeroSection, { ButtonProps, GitHubButton } from '@components/heroSection';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const gitButtons: GitHubButton[] = [
   {
+    id: 'gbtn-1',
     user: 'WasiqB',
     repo: 'coteafs-appium',
     type: 'star',
   },
   {
+    id: 'gbtn-2',
     user: 'WasiqB',
     repo: 'coteafs-appium',
     type: 'fork',
@@ -20,11 +22,13 @@ const gitButtons: GitHubButton[] = [
 
 const buttons: ButtonProps[] = [
   {
+    id: 'btn-1',
     text: 'Get Started',
     className: 'button--primary',
     to: '/projects/coteafs-appium/intro',
   },
   {
+    id: 'btn-2',
     text: 'View on GitHub',
     className: 'button--info',
     iconClass: 'fab fa-github',

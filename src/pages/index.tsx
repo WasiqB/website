@@ -1,9 +1,9 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Features from '../components/Features';
-import HeroSection, { ButtonProps, GitHubButton } from '../components/heroSection';
-import ServiceList from '../contents/services.json';
+import Features from '@components/Features';
+import HeroSection, { ButtonProps, GitHubButton } from '@components/heroSection';
+import ServiceList from '@contents/services.json';
 
 const gitButtons: GitHubButton[] = [
   {
