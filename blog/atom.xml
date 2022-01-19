@@ -9,7 +9,7 @@
     <icon>https://wasiqbhamla.github.io/website/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[How to write API Tests using REST-Assured and OkHttp?]]></title>
-        <id>How to write API Tests using REST-Assured and OkHttp?</id>
+        <id>/2020/03/14/restassured-okhttp</id>
         <link href="https://wasiqbhamla.github.io/website/blog/2020/03/14/restassured-okhttp"/>
         <updated>2020-03-14T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[What is REST-Assured?]]></summary>
@@ -22,7 +22,7 @@ Checkout the following blog for more details about REST-Assured and OkHttp perfo
     </entry>
     <entry>
         <title type="html"><![CDATA[Why is Maven project more preferable than simple Java project?]]></title>
-        <id>Why is Maven project more preferable than simple Java project?</id>
+        <id>/2019/03/03/mavenproject-vs-javaproject</id>
         <link href="https://wasiqbhamla.github.io/website/blog/2019/03/03/mavenproject-vs-javaproject"/>
         <updated>2019-03-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Introduction]]></summary>
@@ -78,7 +78,7 @@ Following is the sample of pom.xm file:</p><pre><code class="language-xml">&lt;p
     </entry>
     <entry>
         <title type="html"><![CDATA[Introduction to GitHub Actions Workflows]]></title>
-        <id>Introduction to GitHub Actions Workflows</id>
+        <id>/2019/02/23/github-actions-workflows</id>
         <link href="https://wasiqbhamla.github.io/website/blog/2019/02/23/github-actions-workflows"/>
         <updated>2019-02-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Introduction]]></summary>
@@ -91,7 +91,7 @@ If you liked this post then share it in your network using the <strong>SHARE</st
     </entry>
     <entry>
         <title type="html"><![CDATA[Beginners guide for Appium Automation for iOS apps]]></title>
-        <id>Beginners guide for Appium Automation for iOS apps</id>
+        <id>/2017/04/24/appium-automation-ios</id>
         <link href="https://wasiqbhamla.github.io/website/blog/2017/04/24/appium-automation-ios"/>
         <updated>2017-04-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Introduction]]></summary>
