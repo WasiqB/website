@@ -1,8 +1,8 @@
 import React from 'react';
 import Layout from '@theme/Layout';
-import Features from '@components/Features';
-import features from '@contents/coteafs-appium-features.json';
-import HeroSection, { ButtonProps, GitHubButton } from '@components/heroSection';
+import Features from '../../../components/Features';
+import features from '../../../contents/coteafs-appium-features.json';
+import HeroSection, { ButtonProps, GitHubButton } from '../../../components/heroSection';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const gitButtons: GitHubButton[] = [
