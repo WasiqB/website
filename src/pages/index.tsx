@@ -3,9 +3,9 @@ import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Features from '../components/Features';
 import ServiceList from '../contents/services.json';
-import { HeroSection } from '../components/HeroSection';
 import { ButtonType } from '../components/ActionButton';
 import { GitHubButtonType } from '../components/GitHubCountButton';
+import { PageHero } from '../components/PageHero';
 
 const gitButtons: GitHubButtonType[] = [
   {
@@ -28,7 +28,7 @@ const buttons: ButtonType[] = [
 
 function HomepageHeader({ title, description }): JSX.Element {
   return (
-    <HeroSection
+    <PageHero
       image={'/img/home_banner.jpg'}
       tagLine={description}
       title={title}

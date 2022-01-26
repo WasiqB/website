@@ -3,9 +3,9 @@ import Layout from '@theme/Layout';
 import Features from '../../../components/Features';
 import features from '../../../contents/coteafs-appium-features.json';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import { HeroSection } from '../../../components/HeroSection';
 import { ButtonType } from '../../../components/ActionButton';
 import { GitHubButtonType } from '../../../components/GitHubCountButton';
+import { PageHero } from '../../../components/PageHero';
 
 const gitButtons: GitHubButtonType[] = [
   {
@@ -47,7 +47,7 @@ const buttons: ButtonType[] = [
 
 const ProjectHero = ({ image, message, description }): JSX.Element => {
   return (
-    <HeroSection
+    <PageHero
       image={useBaseUrl(image)}
       tagLine={description}
       title={message}

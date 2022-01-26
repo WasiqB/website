@@ -13,7 +13,7 @@ interface HeroType {
   gitButtons: Array<GitHubButtonType>;
 }
 
-export const HeroSection = ({
+export const PageHero = ({
   title,
   tagLine,
   image,
