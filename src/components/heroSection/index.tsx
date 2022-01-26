@@ -1,123 +1,65 @@
-import { Link } from '@docusaurus/router';
-import { translate } from '@docusaurus/Translate';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-import clsx from 'clsx';
 import React from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
+import { GitHubButtonType, GitHubCountButton } from '../GitHubCountButton';
+import { ActionButton, ButtonType } from '../ActionButton';
+import { translate } from '@docusaurus/Translate';
 
-export type ButtonProps = {
-  id: string;
-  className: string;
-  to: string;
-  iconClass?: string;
-  text: string;
-};
-
-type HeroProps = {
+interface HeroType {
+  title: string;
+  tagLine: string;
   image: string;
-  message: string;
-  description: string;
-  buttons?: ButtonProps[];
-  gitButtons?: GitHubButton[];
-};
-
-type CTAProps = {
-  buttons: ButtonProps[];
-  gitButtons: GitHubButton[];
-};
-
-export type GitHubButton = {
-  id: string;
-  user: string;
-  repo?: string;
-  type: 'star' | 'watch' | 'fork' | 'follow';
-  v2?: boolean;
-};
-
-function CTAButtons({ buttons, gitButtons }: CTAProps): JSX.Element {
-  if (!buttons || buttons.length === 0) return;
-  return (
-    <>
-      <div className={styles.indexCtas}>
-        {gitButtons &&
-          gitButtons.map((button) => (
-            <GitHubCountButton
-              id={button.id}
-              key={button.id}
-              user={button.user}
-              repo={button.repo}
-              type={button.type}
-              v2={button.v2}
-            />
-          ))}
-        {buttons.map((button) => (
-          <Link
-            key={button.id}
-            className={clsx('button', button.className)}
-            to={useBaseUrl(button.to)}
-          >
-            {button.iconClass && <i className={button.iconClass}></i>}
-            {button.text}
-          </Link>
-        ))}
-      </div>
-    </>
-  );
+  buttons: Array<ButtonType>;
+  gitButtons: Array<GitHubButtonType>;
 }
 
-function GitHubCountButton({ user, repo = null, type, v2 = false }: GitHubButton): JSX.Element {
-  const gitUrl = 'https://ghbtns.com/github-btn.html';
-  const repoQuery = repo ? `repo=${repo}&` : '';
-  const newVersion = v2 === true ? '&v=2' : '';
-  const queries = `user=${user}&${repoQuery}type=${type}&count=true&size=large${newVersion}`;
-  const source = `${gitUrl}?${queries}`;
-  return (
-    <span className={styles.indexCtasGitHubButtonWrapper}>
-      <iframe
-        className={styles.indexCtasGitHubButton}
-        src={source}
-        frameBorder='0'
-        scrolling='0'
-        width={220}
-        height={30}
-      />
-    </span>
-  );
-}
-
-function HeroContent({ image, message, description }): JSX.Element {
-  return (
-    <h1 className={styles.heroProjectTagline}>
-      <img alt={translate({ message: message })} className={styles.heroLogo} src={image} />
-      <span
-        className={styles.heroTitleTextHtml}
-        dangerouslySetInnerHTML={{
-          __html: translate({
-            id: 'homepage.hero.title',
-            message: message,
-            description: description,
-          }),
-        }}
-      />
-    </h1>
-  );
-}
-
-const HeroSection = ({
+export const HeroSection = ({
+  title,
+  tagLine,
   image,
-  message,
-  description,
   buttons = [],
   gitButtons = [],
-}: HeroProps): JSX.Element => {
+}: HeroType): JSX.Element => {
   return (
-    <section className={styles.hero}>
-      <div className={styles.heroInner}>
-        <HeroContent image={useBaseUrl(image)} message={message} description={description} />
+    <section className={styles.HeroContainer}>
+      <div className={styles.HeroContent}>
+        <h1 className={styles.HeroTitle}>{title}</h1>
+        <p className={styles.HeroDescription}>{tagLine}</p>
       </div>
-      <CTAButtons buttons={buttons} gitButtons={gitButtons} />
+      <div className={styles.CallToActions}>
+        <div className={styles.ctaButtons}>
+          {buttons &&
+            buttons.map((button) => (
+              <ActionButton
+                key={button.id}
+                id={button.id}
+                href={useBaseUrl(button.href)}
+                text={button.text}
+                type={button.type}
+                target={button.target}
+              />
+            ))}
+        </div>
+        <div className={styles.SocialButtons}>
+          {gitButtons &&
+            gitButtons.map((button) => (
+              <GitHubCountButton
+                key={button.id}
+                id={button.id}
+                userId={button.userId}
+                repoName={button.repoName}
+                type={button.type}
+              />
+            ))}
+        </div>
+      </div>
+      <div className={styles.HeroImage}>
+        <img
+          alt={translate({ message: title })}
+          className={styles.HeroLogo}
+          src={useBaseUrl(image)}
+        />
+      </div>
     </section>
   );
 };
-
-export default HeroSection;

@@ -7932,6 +7932,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"github-buttons@npm:^2.8.0":
+  version: 2.21.1
+  resolution: "github-buttons@npm:2.21.1"
+  checksum: 5c90dc19a9301cfd5cedbb6adcd62725a7a013d5a564d15383c8cd92090beb3a5290fbdf0dd370b94e4a81e61a417b68f7b5df98da411b7df7453c2012d9a37a
+  languageName: node
+  linkType: hard
+
 "github-from-package@npm:0.0.0":
   version: 0.0.0
   resolution: "github-from-package@npm:0.0.0"
@@ -11895,6 +11902,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-github-btn@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "react-github-btn@npm:1.2.1"
+  dependencies:
+    github-buttons: ^2.8.0
+  checksum: 12c1b3631deef214ced7386b35fd73bbeb2d78742f409356955f475f22256b3af80b99ffa5bb185b66c63b4c34d75ad7a4cf1e947ef5ad3207f29f2fc28d58fc
+  languageName: node
+  linkType: hard
+
 "react-helmet@npm:^6.1.0":
   version: 6.1.0
   resolution: "react-helmet@npm:6.1.0"
@@ -14502,6 +14518,7 @@ __metadata:
     prism-react-renderer: ^1.2.1
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-github-btn: ^1.2.1
     typescript: 4.5.4
     url-loader: ^4.1.1
   languageName: unknown
