@@ -2,59 +2,68 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Features from '../../../components/Features';
 import features from '../../../contents/coteafs-appium-features.json';
-import HeroSection, { ButtonProps, GitHubButton } from '../../../components/heroSection';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import { ButtonType } from '../../../components/ActionButton';
+import { GitHubButtonType } from '../../../components/GitHubCountButton';
+import { PageHero } from '../../../components/PageHero';
 
-const gitButtons: GitHubButton[] = [
+const gitButtons: GitHubButtonType[] = [
   {
-    id: 'gbtn-1',
-    user: 'WasiqB',
-    repo: 'coteafs-appium',
-    type: 'star',
+    id: 1,
+    userId: 'WasiqB',
+    repoName: 'coteafs-appium',
+    type: 'Star',
   },
   {
-    id: 'gbtn-2',
-    user: 'WasiqB',
-    repo: 'coteafs-appium',
-    type: 'fork',
+    id: 2,
+    userId: 'WasiqB',
+    repoName: 'coteafs-appium',
+    type: 'Watch',
+  },
+  {
+    id: 3,
+    userId: 'WasiqB',
+    repoName: 'coteafs-appium',
+    type: 'Fork',
   },
 ];
 
-const buttons: ButtonProps[] = [
+const buttons: ButtonType[] = [
   {
-    id: 'btn-1',
+    id: 1,
     text: 'Get Started',
-    className: 'button--primary',
-    to: '/projects/coteafs-appium/intro',
+    type: 'button--primary',
+    href: '/projects/coteafs-appium/intro',
+    target: '_self',
   },
   {
-    id: 'btn-2',
+    id: 2,
     text: 'View on GitHub',
-    className: 'button--info',
-    iconClass: 'fab fa-github',
-    to: 'https://github.com/WasiqB/coteafs-appium',
+    type: 'button--info',
+    href: 'https://github.com/WasiqB/coteafs-appium',
+    target: '_self',
   },
 ];
 
-function ProjectHero({ image, message, description }): JSX.Element {
+const ProjectHero = ({ image, message, description }): JSX.Element => {
   return (
-    <HeroSection
+    <PageHero
       image={useBaseUrl(image)}
-      description={description}
-      message={message}
+      tagLine={description}
+      title={message}
       buttons={buttons}
       gitButtons={gitButtons}
     />
   );
-}
+};
 
 export default function CoteafsAppium(): JSX.Element {
   return (
     <Layout>
       <ProjectHero
         image='/img/projects/coteafs-appium/appium-banner.gif'
-        message='<b>Coteafs-Appium</b> - Appium wrapper framework for Android and iOS'
-        description='Coteafs-Appium'
+        message='Coteafs-Appium'
+        description='Appium wrapper framework for Android and iOS'
       />
       <Features features={features} />
     </Layout>

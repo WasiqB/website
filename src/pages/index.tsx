@@ -2,32 +2,36 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Features from '../components/Features';
-import HeroSection, { ButtonProps, GitHubButton } from '../components/heroSection';
 import ServiceList from '../contents/services.json';
+import { ButtonType } from '../components/ActionButton';
+import { GitHubButtonType } from '../components/GitHubCountButton';
+import { PageHero } from '../components/PageHero';
 
-const gitButtons: GitHubButton[] = [
+const gitButtons: GitHubButtonType[] = [
   {
-    id: 'gbtn-1',
-    user: 'WasiqB',
-    type: 'follow',
+    id: 1,
+    userId: 'WasiqB',
+    type: 'Follow',
+    repoName: undefined,
   },
 ];
 
-const buttons: ButtonProps[] = [
+const buttons: ButtonType[] = [
   {
-    id: 'btn-1',
+    id: 1,
+    type: 'button--primary',
+    target: '_self',
     text: 'About',
-    className: 'button--primary',
-    to: '/about',
+    href: '/about',
   },
 ];
 
 function HomepageHeader({ title, description }): JSX.Element {
   return (
-    <HeroSection
+    <PageHero
       image={'/img/home_banner.jpg'}
-      description={description}
-      message={title}
+      tagLine={description}
+      title={title}
       buttons={buttons}
       gitButtons={gitButtons}
     />
@@ -38,10 +42,7 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout title={siteConfig.title} description={siteConfig.tagline}>
-      <HomepageHeader
-        title={`<b>${siteConfig.title}</b> - ${siteConfig.tagline}`}
-        description={siteConfig.title}
-      />
+      <HomepageHeader title={siteConfig.title} description={siteConfig.tagline} />
       <main>
         <Features features={ServiceList} />
       </main>

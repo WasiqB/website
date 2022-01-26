@@ -1,0 +1,119 @@
+.HeroContainer {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    'HeroContent HeroImage'
+    'CallToActions HeroImage';
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  height: 400px;
+  background-color: #2b3137;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.HeroContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px 0px;
+  grid-template-areas:
+    'HeroTitle'
+    'HeroDescription';
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  grid-area: HeroContent;
+}
+
+.HeroTitle {
+  grid-area: HeroTitle;
+  color: var(--ifm-color-primary);
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.HeroDescription {
+  grid-area: HeroDescription;
+  color: #fff;
+  font-size: 30px;
+}
+
+.CallToActions {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    'ctaButtons'
+    'SocialButtons';
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  justify-self: center;
+  align-self: center;
+  grid-area: CallToActions;
+}
+
+.ctaButtons {
+  grid-area: ctaButtons;
+  text-transform: uppercase;
+}
+
+.ctaButtons a {
+  margin: 5px;
+}
+
+.SocialButtons {
+  grid-area: SocialButtons;
+}
+
+.SocialButtons span {
+  padding: 5px;
+}
+
+.HeroImage {
+  animation-duration: 2s;
+  animation-name: jackInTheBox;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  margin-top: 20px;
+  grid-area: HeroImage;
+}
+
+.HeroLogo {
+  width: 500px;
+  height: 375px;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+@keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
