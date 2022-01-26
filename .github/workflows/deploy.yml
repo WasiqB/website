@@ -19,7 +19,7 @@ jobs:
       - name: Test Build
         run: |
           yarn set version stable
-          yarn install --frozen-lockfile
+          yarn install --immutable
           yarn build
   gh-release:
     if: github.event_name != 'pull_request'
@@ -41,5 +41,5 @@ jobs:
           git config --global user.email "wasbhamla2005@gmail.com"
           git config --global user.name "Wasiq Bhamla"
           yarn set version stable
-          yarn install --frozen-lockfile
+          yarn install --immutable
           yarn deploy
