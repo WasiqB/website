@@ -1,7 +1,7 @@
 .HeroContainer {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-rows: 0.5fr 0.5fr;
   gap: 0px 0px;
   grid-template-areas:
     'HeroContent HeroImage'
@@ -10,7 +10,6 @@
   align-content: center;
   justify-items: center;
   align-items: center;
-  height: 400px;
   background-color: #2b3137;
   overflow: hidden;
   padding: 10px;
@@ -19,7 +18,7 @@
 .HeroContent {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
   gap: 10px 0px;
   grid-template-areas:
     'HeroTitle'
@@ -86,14 +85,15 @@
   align-content: center;
   justify-items: center;
   align-items: center;
-  margin-top: 20px;
   grid-area: HeroImage;
 }
 
 .HeroLogo {
-  width: 500px;
-  height: 375px;
-  object-fit: cover;
+  width: 85%;
+  height: 100%;
+  padding: 10px;
+  object-position: center;
+  object-fit: fill;
   border-radius: 10%;
 }
 
@@ -115,5 +115,97 @@
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .HeroContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.33fr 0.33fr 0.33fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+      'HeroImage'
+      'HeroContent'
+      'CallToActions';
+  }
+
+  .HeroImage {
+    justify-self: stretch;
+    align-self: stretch;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    grid-area: HeroImage;
+  }
+
+  .HeroContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      'HeroTitle'
+      'HeroDescription';
+    justify-self: center;
+    padding-right: 10px;
+    grid-area: HeroContent;
+  }
+
+  .HeroTitle {
+    justify-self: center;
+    align-self: center;
+    font-size: 30px;
+    grid-area: HeroTitle;
+  }
+
+  .HeroDescription {
+    align-self: center;
+    font-size: 20px;
+    grid-area: HeroDescription;
+  }
+
+  .CallToActions {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      'ctaButtons'
+      'SocialButtons';
+    justify-self: center;
+    grid-area: CallToActions;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+  }
+
+  .ctaButtons {
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    grid-area: ctaButtons;
+  }
+
+  .SocialButtons {
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    grid-area: SocialButtons;
   }
 }
