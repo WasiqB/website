@@ -110,5 +110,4 @@ module.exports = {
         additionalLanguages: ['java', 'yaml'],
       },
     }),
-  scripts: ['https://buttons.github.io/buttons.js'],
 };

@@ -1,14 +1,14 @@
 import React from 'react';
 import GitHubButton from 'react-github-btn';
 
-export type GitHubButtonType = {
+type GitHubButtonType = {
   id: number;
   userId: string;
   repoName: string;
   type: 'Watch' | 'Star' | 'Fork' | 'Follow';
 };
 
-export const GitHubCountButton = ({
+const GitHubCountButton = ({
   userId,
   repoName = undefined,
   type = 'Follow',
@@ -36,3 +36,5 @@ export const GitHubCountButton = ({
     </GitHubButton>
   );
 };
+
+export { GitHubCountButton };

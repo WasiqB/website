@@ -1,18 +1,11 @@
 import React from 'react';
 import clsx from 'clsx';
+import { Link } from '@docusaurus/router';
 
-export interface ButtonType {
-  id: number;
-  href: string;
-  type: string;
-  target: string;
-  text: string;
-}
-
-export const ActionButton = ({ href, type, target, text }: ButtonType): JSX.Element => {
+export const ActionButton = ({ href, type, target, text }): JSX.Element => {
   return (
-    <a className={clsx('button', type)} href={href} target={target}>
+    <Link className={clsx('button', type)} to={href} target={target}>
       {text}
-    </a>
+    </Link>
   );
 };
