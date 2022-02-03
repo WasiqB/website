@@ -21,7 +21,17 @@ module.exports = {
     user: userName,
   },
   themes: ['@docusaurus/theme-live-codeblock'],
-  plugins: ['@docusaurus/plugin-ideal-image'],
+  plugins: [
+    [
+      'ideal-image',
+      {
+        quality: 70,
+        max: 1030,
+        min: 640,
+        steps: 2,
+      },
+    ],
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -50,6 +60,13 @@ module.exports = {
     ({
       navbar: {
         title: 'Wasiq Bhamla',
+        logo: {
+          alt: 'Wasiq Logo',
+          src: 'img/favicon.ico',
+          srcDark: 'img/favicon.ico',
+          width: 32,
+          height: 32,
+        },
         items: [
           {
             position: 'left',
@@ -63,7 +80,8 @@ module.exports = {
           },
           {
             href: `https://github.com/${userName}`,
-            label: 'GitHub',
+            'aria-label': 'GitHub profile',
+            className: 'header-github-link',
             position: 'right',
           },
         ],
