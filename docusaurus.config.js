@@ -80,7 +80,7 @@ module.exports = {
           },
           {
             href: `https://github.com/${userName}`,
-            'aria-label': 'GitHub repository',
+            'aria-label': 'GitHub profile',
             className: 'header-github-link',
             position: 'right',
           },
