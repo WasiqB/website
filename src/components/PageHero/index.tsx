@@ -3,13 +3,15 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 import { GitHubCountButton } from '../GitHubCountButton';
 import { ActionButton } from '../ActionButton';
-import { translate } from '@docusaurus/Translate';
+import Typist from 'react-typist';
 
 const HeroContent = ({ title, tagLine }): JSX.Element => {
   return (
     <div className={styles.HeroContent}>
       <h1 className={styles.HeroTitle}>{title}</h1>
-      <p className={styles.HeroDescription}>{tagLine}</p>
+      <Typist avgTypingDelay={40} cursor={{ hideWhenDone: true, show: false }}>
+        <p className={styles.HeroDescription}>{tagLine}</p>
+      </Typist>
     </div>
   );
 };
@@ -48,27 +50,21 @@ const SocialButtons = ({ gitButtons }): JSX.Element => {
   );
 };
 
-const HeroImage = ({ title, image }): JSX.Element => {
-  return (
-    <div className={styles.HeroImage}>
-      <img
-        alt={translate({ message: title })}
-        className={styles.HeroLogo}
-        src={useBaseUrl(image)}
-      />
-    </div>
-  );
-};
-
 const PageHero = ({ title, tagLine, image, buttons = [], gitButtons = [] }): JSX.Element => {
   return (
-    <section className={styles.HeroContainer}>
+    <section
+      className={styles.HeroContainer}
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${useBaseUrl(
+          image
+        )})`,
+      }}
+    >
       <HeroContent title={title} tagLine={tagLine} />
       <div className={styles.CallToActions}>
         <CTAButtons buttons={buttons} />
         <SocialButtons gitButtons={gitButtons} />
       </div>
-      <HeroImage title={title} image={image} />
     </section>
   );
 };

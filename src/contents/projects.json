@@ -1,0 +1,17 @@
+{
+  "title": "My Projects",
+  "description": "Checkout my open source projects hosted on GitHub listed below.",
+  "image": "/img/projects/projects.jpg",
+  "projects": [
+    {
+      "title": "Coteafs-Appium",
+      "description": "Appium wrapper framework for Android and iOS",
+      "image": "/img/projects/coteafs-appium/appium-banner.gif"
+    },
+    {
+      "title": "Coteafs-Appium",
+      "description": "Appium wrapper framework for Android and iOS",
+      "image": "/img/projects/coteafs-appium/appium-banner.gif"
+    }
+  ]
+}
