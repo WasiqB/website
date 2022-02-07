@@ -1,18 +1,23 @@
 .HeroContainer {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  grid-template-rows: 0.5fr 0.5fr;
+  grid-template-columns: 0.5fr;
+  grid-template-rows: 0.5fr;
   gap: 0px 0px;
   grid-template-areas:
-    'HeroContent HeroImage'
-    'CallToActions HeroImage';
+    'HeroContent'
+    'CallToActions';
   justify-content: center;
   align-content: center;
   justify-items: center;
   align-items: center;
   background-color: #2b3137;
   overflow: hidden;
-  padding: 10px;
+  min-height: calc(100vh - 60px);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000;
+  background-position: 60%;
 }
 
 .HeroContent {
@@ -28,6 +33,8 @@
   justify-items: center;
   align-items: center;
   text-align: center;
+  justify-self: center;
+  align-self: end;
   grid-area: HeroContent;
 }
 
@@ -36,6 +43,7 @@
   color: var(--ifm-color-primary);
   font-size: 50px;
   text-transform: uppercase;
+  text-shadow: rgb(216, 60, 13) 5px 5px 10px;
 }
 
 .HeroDescription {
@@ -47,7 +55,7 @@
 .CallToActions {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
   gap: 10px 10px;
   grid-template-areas:
     'ctaButtons'
@@ -57,7 +65,7 @@
   align-items: center;
   justify-items: center;
   justify-self: center;
-  align-self: center;
+  align-self: start;
   grid-area: CallToActions;
 }
 
@@ -78,51 +86,11 @@
   padding: 5px;
 }
 
-.HeroImage {
-  animation-duration: 2s;
-  animation-name: jackInTheBox;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  align-items: center;
-  grid-area: HeroImage;
-}
-
-.HeroLogo {
-  width: 85%;
-  height: 100%;
-  padding: 10px;
-  object-position: center;
-  object-fit: fill;
-  border-radius: 10%;
-}
-
-@keyframes jackInTheBox {
-  from {
-    opacity: 0;
-    transform: scale(0.1) rotate(30deg);
-    transform-origin: center bottom;
-  }
-
-  50% {
-    transform: rotate(-10deg);
-  }
-
-  70% {
-    transform: rotate(3deg);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 @media only screen and (max-width: 900px) {
   .HeroContainer {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.33fr 0.33fr 0.33fr;
+    grid-template-rows: 0.5fr 0.5fr;
     gap: 10px 10px;
     grid-auto-flow: row;
     justify-content: center;
@@ -130,20 +98,8 @@
     justify-items: center;
     align-items: center;
     grid-template-areas:
-      'HeroImage'
       'HeroContent'
       'CallToActions';
-  }
-
-  .HeroImage {
-    justify-self: stretch;
-    align-self: stretch;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    grid-area: HeroImage;
   }
 
   .HeroContent {
@@ -176,7 +132,7 @@
   .CallToActions {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
     gap: 10px 10px;
     grid-auto-flow: row;
     grid-template-areas:

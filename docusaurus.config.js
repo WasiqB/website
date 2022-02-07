@@ -70,6 +70,11 @@ module.exports = {
         items: [
           {
             position: 'left',
+            to: '/projects',
+            label: 'Projects',
+          },
+          {
+            position: 'left',
             to: '/about',
             label: 'About me',
           },
@@ -102,7 +107,7 @@ module.exports = {
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/WasiqBhamla',
+                href: `https://twitter.com/${organizationName}`,
               },
             ],
           },

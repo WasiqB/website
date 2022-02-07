@@ -11661,6 +11661,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prop-types@npm:^15.5.10":
+  version: 15.8.1
+  resolution: "prop-types@npm:15.8.1"
+  dependencies:
+    loose-envify: ^1.4.0
+    object-assign: ^4.1.1
+    react-is: ^16.13.1
+  checksum: c056d3f1c057cb7ff8344c645450e14f088a915d078dcda795041765047fa080d38e5d626560ccaac94a4e16e3aa15f3557c1a9a8d1174530955e992c675e459
+  languageName: node
+  linkType: hard
+
 "property-information@npm:^5.0.0, property-information@npm:^5.3.0":
   version: 5.6.0
   resolution: "property-information@npm:5.6.0"
@@ -11898,7 +11909,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.6.0, react-is@npm:^16.7.0, react-is@npm:^16.8.1":
+"react-is@npm:^16.13.1, react-is@npm:^16.6.0, react-is@npm:^16.7.0, react-is@npm:^16.8.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
@@ -12039,6 +12050,18 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0
   checksum: da3d0192825df3d9f27eef33e7eddf928359a7e3e2b01ae7f7f672ecf4e5c1f7a34f27bdde9ccc24e2e9fbe1d1b9dd2a39c7d47323c9bdf63e7b9bd05c325a71
+  languageName: node
+  linkType: hard
+
+"react-typist@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "react-typist@npm:2.0.5"
+  dependencies:
+    prop-types: ^15.5.10
+  peerDependencies:
+    react: ^0.14 || ^15.0 || ^16.0
+    react-dom: "*"
+  checksum: 6f2e7f8b7c087d87df2cb84c7f80a67021c879dabb67f40feeb8e2f754c9a5bfaab44f757664388c124aec9911151e8e4eee9357789ed3f9af1e6bc5fc0e2f85
   languageName: node
   linkType: hard
 
@@ -14486,6 +14509,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-github-btn: ^1.2.1
+    react-typist: ^2.0.5
     typescript: 4.5.4
     url-loader: ^4.1.1
   languageName: unknown

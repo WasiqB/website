@@ -1,0 +1,13 @@
+{
+  "title": "My Projects",
+  "description": "Checkout my open source projects hosted on GitHub listed below.",
+  "image": "/img/projects/projects.jpg",
+  "projects": [
+    {
+      "title": "Coteafs-Appium",
+      "description": "Wrapper Appium Test Automation Framework which supports Automation of Mobile and Tablet apps for Android and iOS Real Devices / Emulators.",
+      "image": "/img/projects/coteafs-appium/appium-banner.gif",
+      "link": "/projects/coteafs-appium"
+    }
+  ]
+}

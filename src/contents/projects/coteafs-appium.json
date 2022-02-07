@@ -16,6 +16,13 @@
       "type": "button--info",
       "href": "https://github.com/WasiqB/coteafs-appium",
       "target": "_self"
+    },
+    {
+      "id": 3,
+      "text": "Join us on Discord",
+      "type": "button--info",
+      "href": "https://discord.gg/URFdsQSTfV",
+      "target": "_blank"
     }
   ],
   "gitButtons": [
@@ -42,7 +49,7 @@
     {
       "title": "Configurable",
       "image": "./img/projects/coteafs-appium/undraw_personal_settings_kihd.svg",
-      "description": "All the capabilities and server flags are configurable via config file in any of the following formats: <code>yaml</code>, <code>json</code>, <code>xml</code> and <code>properties</code>."
+      "description": "All the capabilities and server flags are configurable via config file in any of the following formats: yaml, json, xml and properties."
     },
     {
       "title": "Battery aware",
