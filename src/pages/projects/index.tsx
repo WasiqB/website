@@ -1,8 +1,8 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import React from 'react';
-import { Features } from '../../components/Features';
 import { PageHero } from '../../components/PageHero';
+import { ProjectList } from '../../components/ProjectList';
 import Data from '../../contents/projects.json';
 
 const Projects = (): JSX.Element => {
@@ -15,7 +15,7 @@ const Projects = (): JSX.Element => {
         buttons={[]}
         gitButtons={[]}
       />
-      <Features features={Data.projects} />
+      <ProjectList projects={Data.projects} />
     </Layout>
   );
 };
