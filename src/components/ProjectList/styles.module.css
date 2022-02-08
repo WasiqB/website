@@ -24,15 +24,15 @@
     'ProjectImage'
     'ProjectInfo';
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 10px;
   padding: 10px;
   text-align: center;
-  box-shadow: 0px 0px 5px #ccc;
+  box-shadow: 0px 0px 10px #ccc;
 }
 
 .Project:hover {
-  box-shadow: 0px 0px 10px #ccc;
+  box-shadow: 0px 0px 15px #ccc;
 }
 
 .ProjectImage {
@@ -44,12 +44,11 @@
 .ProjectInfo {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.33fr 0.33fr 0.33fr;
+  grid-template-rows: 0.5fr 0.5fr;
   gap: 10px 0px;
   grid-template-areas:
     'ProjectTitle'
-    'ProjectDescription'
-    'ProjectLinks';
+    'ProjectDescription';
   justify-content: center;
   align-content: center;
   justify-items: center;
@@ -65,8 +64,4 @@
 
 .ProjectDescription {
   grid-area: ProjectDescription;
-}
-
-.ProjectLinks {
-  grid-area: ProjectLinks;
 }
