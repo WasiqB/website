@@ -56,6 +56,14 @@ module.exports = {
           changefreq: 'weekly',
           priority: 0.5,
         },
+        googleAnalytics: {
+          trackingId: 'UA-111539609-2',
+          anonymizeIP: true,
+        },
+        gtag: {
+          trackingID: '303081267',
+          anonymizeIP: true,
+        },
       }),
     ],
   ],
