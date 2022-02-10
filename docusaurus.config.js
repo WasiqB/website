@@ -70,6 +70,18 @@ module.exports = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
+      algolia: {
+        appId: 'XWNN9QSB9W',
+        apiKey: 'f1ecb0075381566530ac05e10d25bddf',
+        indexName: 'production',
+        contextualSearch: true,
+      },
+      image: 'img/home_banner.jpg',
       navbar: {
         title: 'Wasiq Bhamla',
         logo: {
