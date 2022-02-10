@@ -57,7 +57,7 @@ module.exports = {
           priority: 0.5,
         },
         googleAnalytics: {
-          trackingId: 'UA-111539609-2',
+          trackingID: 'UA-111539609-2',
           anonymizeIP: true,
         },
         gtag: {
