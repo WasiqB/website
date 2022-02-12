@@ -8,7 +8,7 @@ const userName = 'WasiqB';
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Wasiq Bhamla',
-  tagline: 'Open Source Contributor, Mentor and Senior QA Consultant at Thoughtworks',
+  tagline: 'Open Source Contributor, Mentor and Quality Analyst',
   url: 'https://wasiqbhamla.github.io',
   baseUrl: '/website/',
   onBrokenLinks: 'throw',
@@ -20,24 +20,13 @@ module.exports = {
   customFields: {
     user: userName,
   },
-  themes: ['@docusaurus/theme-live-codeblock'],
-  plugins: [
-    [
-      'ideal-image',
-      {
-        quality: 70,
-        max: 1030,
-        min: 640,
-        steps: 2,
-      },
-    ],
-  ],
   presets: [
     [
-      '@docusaurus/preset-classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
+      'classic',
+      /** @type {import('@docusaurus/theme-classic').Options} */
       ({
         docs: {
+          id: 'coteafs-appium',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           path: 'docs/coteafs-appium',
@@ -68,8 +57,14 @@ module.exports = {
     ],
   ],
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    /** @type {import('@docusaurus/theme-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
+      image: 'img/home_banner.jpg',
       navbar: {
         title: 'Wasiq Bhamla',
         logo: {

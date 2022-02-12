@@ -4,6 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { Features } from '../components/Features';
 import { PageHero } from '../components/PageHero';
 import Data from '../contents/home.json';
+import BackToTopButton from '@theme/BackToTopButton';
 
 const HomepageHeader = ({ title, description }): JSX.Element => {
   return (
@@ -25,6 +26,7 @@ const Home = (): JSX.Element => {
       <main>
         <Features features={Data.services} />
       </main>
+      <BackToTopButton />
     </Layout>
   );
 };

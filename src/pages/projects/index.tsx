@@ -1,4 +1,5 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import BackToTopButton from '@theme/BackToTopButton';
 import Layout from '@theme/Layout';
 import React from 'react';
 import { PageHero } from '../../components/PageHero';
@@ -16,6 +17,7 @@ const Projects = (): JSX.Element => {
         gitButtons={[]}
       />
       <ProjectList projects={Data.projects} />
+      <BackToTopButton />
     </Layout>
   );
 };
