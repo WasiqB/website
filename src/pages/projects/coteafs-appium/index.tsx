@@ -4,6 +4,7 @@ import { Features } from '../../../components/Features';
 import Data from '../../../contents/projects/coteafs-appium.json';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { PageHero } from '../../../components/PageHero';
+import BackToTopButton from '@theme/BackToTopButton';
 
 const ProjectHero = (): JSX.Element => {
   return (
@@ -22,6 +23,7 @@ const CoteafsAppium = (): JSX.Element => {
     <Layout>
       <ProjectHero />
       <Features features={Data.features} />
+      <BackToTopButton />
     </Layout>
   );
 };
