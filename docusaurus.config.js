@@ -20,6 +20,13 @@ module.exports = {
   customFields: {
     user: userName,
   },
+  scripts: [
+    {
+      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+      async: true,
+      'data-ad-client': 'ca-pub-5312466767582335',
+    },
+  ],
   presets: [
     [
       'classic',
