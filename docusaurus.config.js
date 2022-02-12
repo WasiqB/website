@@ -20,6 +20,13 @@ module.exports = {
   customFields: {
     user: userName,
   },
+  scripts: [
+    {
+      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+      async: true,
+      'data-ad-client': 'ca-pub-5312466767582335',
+    },
+  ],
   presets: [
     [
       'classic',
@@ -63,6 +70,12 @@ module.exports = {
         defaultMode: 'dark',
         disableSwitch: false,
         respectPrefersColorScheme: true,
+      },
+      algolia: {
+        appId: 'XWNN9QSB9W',
+        apiKey: 'f1ecb0075381566530ac05e10d25bddf',
+        indexName: 'production',
+        contextualSearch: true,
       },
       image: 'img/home_banner.jpg',
       navbar: {
