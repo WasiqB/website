@@ -4,6 +4,7 @@ import styles from './styles.module.css';
 import { GitHubCountButton } from '../GitHubCountButton';
 import { ActionButton } from '../ActionButton';
 import Typist from 'react-typist';
+import { TwitterFollowButton } from 'react-twitter-embed';
 
 const HeroContent = ({ title, tagLine }): JSX.Element => {
   return (
@@ -33,7 +34,7 @@ const CTAButtons = ({ buttons }): JSX.Element => {
   );
 };
 
-const SocialButtons = ({ gitButtons }): JSX.Element => {
+const SocialButtons = ({ gitButtons, showTwitter }): JSX.Element => {
   return (
     <div className={styles.SocialButtons}>
       {gitButtons &&
@@ -46,11 +47,19 @@ const SocialButtons = ({ gitButtons }): JSX.Element => {
             type={button.type}
           />
         ))}
+      {showTwitter && <TwitterFollowButton screenName={'WasiqBhamla'} />}
     </div>
   );
 };
 
-const PageHero = ({ title, tagLine, image, buttons = [], gitButtons = [] }): JSX.Element => {
+const PageHero = ({
+  title,
+  tagLine,
+  image,
+  buttons = [],
+  gitButtons = [],
+  showTwitter = false,
+}): JSX.Element => {
   return (
     <section
       className={styles.HeroContainer}
@@ -63,7 +72,7 @@ const PageHero = ({ title, tagLine, image, buttons = [], gitButtons = [] }): JSX
       <HeroContent title={title} tagLine={tagLine} />
       <div className={styles.CallToActions}>
         <CTAButtons buttons={buttons} />
-        <SocialButtons gitButtons={gitButtons} />
+        <SocialButtons gitButtons={gitButtons} showTwitter={showTwitter} />
       </div>
     </section>
   );
