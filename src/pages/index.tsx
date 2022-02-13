@@ -14,6 +14,7 @@ const HomepageHeader = ({ title, description }): JSX.Element => {
       title={title}
       buttons={Data.buttons}
       gitButtons={Data.gitButtons}
+      showTwitter
     />
   );
 };
