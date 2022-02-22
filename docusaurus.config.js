@@ -83,19 +83,25 @@ module.exports = {
         },
         items: [
           {
-            position: 'left',
+            position: 'right',
             to: '/projects',
             label: 'Projects',
+            items: [
+              {
+                label: 'coteafs-appium',
+                to: '/projects/coteafs-appium',
+              },
+            ],
           },
           {
-            position: 'left',
+            position: 'right',
             to: '/about',
             label: 'About me',
           },
           {
             to: '/blog',
-            label: 'Blog',
-            position: 'left',
+            label: 'Blog Posts',
+            position: 'right',
           },
           {
             href: `https://github.com/${userName}`,
