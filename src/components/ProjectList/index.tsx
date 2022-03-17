@@ -1,4 +1,4 @@
-import { Link } from '@docusaurus/router';
+import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import clsx from 'clsx';
 import React from 'react';
@@ -35,4 +35,4 @@ const ProjectList = ({ projects }): JSX.Element => {
   );
 };
 
-export { ProjectList };
+export default ProjectList;

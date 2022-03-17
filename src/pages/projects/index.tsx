@@ -3,7 +3,7 @@ import BackToTopButton from '@theme/BackToTopButton';
 import Layout from '@theme/Layout';
 import React from 'react';
 import { PageHero } from '../../components/PageHero';
-import { ProjectList } from '../../components/ProjectList';
+import ProjectList from '../../components/ProjectList';
 import Data from '../../contents/projects.json';
 
 const Projects = (): JSX.Element => {
