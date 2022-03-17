@@ -19,10 +19,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-beta.14",
-    "@docusaurus/plugin-ideal-image": "2.0.0-beta.14",
-    "@docusaurus/preset-classic": "2.0.0-beta.14",
-    "@docusaurus/theme-classic": "2.0.0-beta.14",
+    "@docusaurus/core": "2.0.0-beta.17",
+    "@docusaurus/plugin-ideal-image": "2.0.0-beta.17",
+    "@docusaurus/preset-classic": "2.0.0-beta.17",
+    "@docusaurus/theme-classic": "2.0.0-beta.17",
     "@mdx-js/react": "1.6.22",
     "@svgr/webpack": "6.2.1",
     "acorn": "^8.7.0",
@@ -35,25 +35,25 @@
     "url-loader": "^4.1.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.0.0-beta.14",
-    "@tsconfig/docusaurus": "^1.0.4",
-    "@types/react": "17.0.39",
+    "@docusaurus/module-type-aliases": "2.0.0-beta.17",
+    "@tsconfig/docusaurus": "^1.0.5",
+    "@types/react": "17.0.40",
     "@types/react-helmet": "6.1.5",
     "@types/react-router-dom": "5.3.3",
-    "@typescript-eslint/eslint-plugin": "5.12.1",
-    "@typescript-eslint/parser": "5.12.1",
-    "eslint": "8.10.0",
-    "eslint-config-prettier": "^8.4.0",
+    "@typescript-eslint/eslint-plugin": "5.15.0",
+    "@typescript-eslint/parser": "5.15.0",
+    "eslint": "8.11.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "7.29.2",
+    "eslint-plugin-react": "7.29.4",
     "husky": "^7.0.4",
-    "lint-staged": "12.3.4",
-    "prettier": "2.5.1",
+    "lint-staged": "12.3.6",
+    "prettier": "2.6.0",
     "react-twitter-embed": "^4.0.4",
     "react-typist": "^2.0.5",
-    "typescript": "4.5.5"
+    "typescript": "4.6.2"
   },
   "browserslist": {
     "production": [
