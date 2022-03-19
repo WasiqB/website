@@ -49,7 +49,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "7.29.4",
     "husky": "^7.0.4",
-    "lint-staged": "12.3.6",
+    "lint-staged": "12.3.7",
     "prettier": "2.6.0",
     "react-twitter-embed": "^4.0.4",
     "react-typist": "^2.0.5",

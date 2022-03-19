@@ -20,13 +20,7 @@ module.exports = {
   customFields: {
     user: userName,
   },
-  scripts: [
-    {
-      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-      async: true,
-      'data-ad-client': 'ca-pub-5312466767582335',
-    },
-  ],
+  scripts: [],
   presets: [
     [
       'classic',
@@ -115,19 +109,23 @@ module.exports = {
         style: 'dark',
         links: [
           {
-            title: 'Community',
+            title: 'Follow me',
             items: [
               {
                 label: 'LinkedIn',
                 href: 'https://www.linkedin.com/in/wasiqbhamla/',
               },
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/users/5320558/wasiq-bhamla',
-              },
-              {
                 label: 'Twitter',
                 href: `https://twitter.com/${organizationName}`,
+              },
+              {
+                label: 'GitHub',
+                href: `https://github.com/${userName}`,
+              },
+              {
+                label: 'Stack Overflow',
+                href: 'https://stackoverflow.com/users/5320558/wasiq-bhamla',
               },
             ],
           },
@@ -135,17 +133,21 @@ module.exports = {
             title: 'More',
             items: [
               {
+                label: 'Projects',
+                to: '/projects',
+              },
+              {
                 label: 'Blogs',
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: `https://github.com/${userName}`,
+                label: 'About me',
+                to: '/about',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Wasiq Bhamla. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Wasiq Bhamla. Built with ❤️ using <a href="https://www.docusaurus.io/">Docusaurus</a>.`,
       },
       prism: {
         theme: lightCodeTheme,
