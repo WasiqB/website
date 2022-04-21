@@ -38,12 +38,16 @@ module.exports = {
         blog: {
           showReadingTime: true,
           editUrl: `https://github.com/${organizationName}/${projectName}/edit/main/blog/`,
+          feedOptions: {
+            type: 'rss',
+            copyright: `Copyright © ${new Date().getFullYear()} Wasiq Bhamla. Built with ❤️ using <a href="https://www.docusaurus.io/">Docusaurus</a>.`,
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
         sitemap: {
-          changefreq: 'weekly',
+          changefreq: 'daily',
           priority: 0.5,
         },
         googleAnalytics: {
@@ -126,6 +130,14 @@ module.exports = {
               {
                 label: 'Stack Overflow',
                 href: 'https://stackoverflow.com/users/5320558/wasiq-bhamla',
+              },
+              {
+                label: 'Medium',
+                href: 'https://medium.com/@WasiqB',
+              },
+              {
+                label: 'Sitemap',
+                href: '/sitemap.xml',
               },
             ],
           },
