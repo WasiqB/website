@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[4673],{5587:function(e){e.exports=JSON.parse('{"allTagsPath":"/website/blog/tags","name":"Appium iOS","count":1,"permalink":"/website/blog/tags/appium-i-os"}')}}]);

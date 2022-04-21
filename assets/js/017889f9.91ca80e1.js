@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[9110],{3785:function(e){e.exports=JSON.parse('{"allTagsPath":"/website/blog/tags","name":"REST-Assured","count":1,"permalink":"/website/blog/tags/rest-assured"}')}}]);
